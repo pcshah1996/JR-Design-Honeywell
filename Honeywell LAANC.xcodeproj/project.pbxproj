@@ -13,6 +13,7 @@
 		6EAA556A219E0753009A0E70 /* Honeywell_LAANC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6EAA5568219E0753009A0E70 /* Honeywell_LAANC.xcdatamodeld */; };
 		6EAA556C219E0755009A0E70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EAA556B219E0755009A0E70 /* Assets.xcassets */; };
 		6EAA556F219E0755009A0E70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EAA556D219E0755009A0E70 /* LaunchScreen.storyboard */; };
+		6EAA5578219E0E26009A0E70 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EAA5577219E0E26009A0E70 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6EAA556B219E0755009A0E70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6EAA556E219E0755009A0E70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6EAA5570219E0755009A0E70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EAA5577219E0E26009A0E70 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EAA5578219E0E26009A0E70 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +45,7 @@
 			children = (
 				6EAA5560219E0753009A0E70 /* Honeywell LAANC */,
 				6EAA555F219E0753009A0E70 /* Products */,
+				6EAA5576219E0E26009A0E70 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +69,14 @@
 				6EAA5568219E0753009A0E70 /* Honeywell_LAANC.xcdatamodeld */,
 			);
 			path = "Honeywell LAANC";
+			sourceTree = "<group>";
+		};
+		6EAA5576219E0E26009A0E70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6EAA5577219E0E26009A0E70 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +111,11 @@
 				TargetAttributes = {
 					6EAA555D219E0753009A0E70 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -289,6 +306,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 87GHM986NK;
 				INFOPLIST_FILE = "Honeywell LAANC/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +314,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "paris.ideas.Honeywell-LAANC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -307,6 +325,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 87GHM986NK;
 				INFOPLIST_FILE = "Honeywell LAANC/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,7 +333,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "paris.ideas.Honeywell-LAANC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
