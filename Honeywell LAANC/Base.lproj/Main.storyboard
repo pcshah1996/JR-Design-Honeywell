@@ -108,7 +108,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="nOZ-HQ-ncc" kind="show" id="leC-tW-WgX"/>
+                                    <segue destination="oYI-8e-4Uc" kind="presentation" id="7qi-R6-MK9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -349,11 +349,191 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VRs-rH-rO2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="984.1726618705037" y="607.55395683453241"/>
+            <point key="canvasLocation" x="1053" y="481"/>
+        </scene>
+        <!--My Drones View Controller-->
+        <scene sceneID="ytU-4r-dVk">
+            <objects>
+                <viewController id="oYI-8e-4Uc" customClass="MyDronesViewController" customModule="Honeywell_LAANC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DDM-IH-VUt">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kfp-d5-RO2">
+                                <rect key="frame" x="208" y="305" width="418" height="503"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CELL" textLabel="h6w-wG-FFQ" detailTextLabel="hMI-9D-epI" style="IBUITableViewCellStyleSubtitle" id="cDD-p4-qJn">
+                                        <rect key="frame" x="0.0" y="28" width="418" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cDD-p4-qJn" id="10m-iw-0hK">
+                                            <rect key="frame" x="0.0" y="0.0" width="418" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h6w-wG-FFQ">
+                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hMI-9D-epI">
+                                                    <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXW-nV-hps">
+                                <rect key="frame" x="239" y="858" width="356" height="137"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.4941176471" green="0.80784313730000001" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="51"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="adD-Jj-AC3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Drones" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVR-Id-MEQ">
+                                <rect key="frame" x="202" y="20" width="430" height="114"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="95"/>
+                                <color key="textColor" red="0.4941176471" green="0.80784313730000001" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6m-fC-BqM">
+                                <rect key="frame" x="302" y="222" width="231" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.4941176471" green="0.80784313730000001" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="51"/>
+                                <state key="normal" title="Add Drone"/>
+                                <connections>
+                                    <segue destination="fV9-4Z-uUO" kind="presentation" id="XYW-5c-pHP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12941176469999999" green="0.52156862749999999" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lVR-Id-MEQ" firstAttribute="top" secondItem="GgY-qo-vLd" secondAttribute="top" id="A94-wE-3Vp"/>
+                            <constraint firstItem="lVR-Id-MEQ" firstAttribute="centerX" secondItem="GgY-qo-vLd" secondAttribute="centerX" id="MVz-2x-PRG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GgY-qo-vLd"/>
+                    </view>
+                    <connections>
+                        <outlet property="droneTableView" destination="Kfp-d5-RO2" id="3Ll-4u-2Zd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dJ2-FJ-z1q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44" y="847"/>
+        </scene>
+        <!--Add Drone View Controller-->
+        <scene sceneID="Pol-JR-djf">
+            <objects>
+                <viewController id="fV9-4Z-uUO" customClass="AddDroneViewController" customModule="Honeywell_LAANC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tmv-YZ-ixu">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNQ-uC-Fvh">
+                                <rect key="frame" x="239" y="858" width="356" height="137"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.4941176471" green="0.80784313730000001" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="51"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="oYI-8e-4Uc" kind="presentation" id="Bgc-uw-TYG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfs-TP-CbC">
+                                <rect key="frame" x="239" y="713" width="356" height="137"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.4941176471" green="0.80784313730000001" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="51"/>
+                                <state key="normal" title="Add Drone"/>
+                                <connections>
+                                    <action selector="addDrone:" destination="fV9-4Z-uUO" eventType="touchUpInside" id="xzX-fQ-eCv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Drone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKs-ju-43W">
+                                <rect key="frame" x="204.5" y="20" width="425" height="114"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="95"/>
+                                <color key="textColor" red="0.4941176471" green="0.80784313730000001" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Make" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6rH-KA-DpN">
+                                <rect key="frame" x="204" y="211" width="413" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Model" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ddT-1U-tR5">
+                                <rect key="frame" x="204" y="249" width="413" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Serial No." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oJH-BP-DXt">
+                                <rect key="frame" x="204" y="287" width="413" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="FAA Registration ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0w5-Pl-ByQ">
+                                <rect key="frame" x="204" y="325" width="413" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aGJ-7C-46G">
+                                <rect key="frame" x="204" y="363" width="413" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E90-Qe-Wgx">
+                                <rect key="frame" x="204" y="173" width="413" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12941176469999999" green="0.52156862749999999" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zKs-ju-43W" firstAttribute="top" secondItem="70X-Xa-fpa" secondAttribute="top" id="fOI-Ur-xfG"/>
+                            <constraint firstItem="zKs-ju-43W" firstAttribute="centerX" secondItem="70X-Xa-fpa" secondAttribute="centerX" id="zIK-la-K3g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="70X-Xa-fpa"/>
+                    </view>
+                    <connections>
+                        <outlet property="makeTextField" destination="6rH-KA-DpN" id="C5Y-VW-Oip"/>
+                        <outlet property="modelTextField" destination="ddT-1U-tR5" id="3jh-aD-mrw"/>
+                        <outlet property="nameTextField" destination="E90-Qe-Wgx" id="fP4-hE-U4G"/>
+                        <outlet property="registrationIDTextField" destination="0w5-Pl-ByQ" id="nUZ-nn-V3o"/>
+                        <outlet property="serialNoTextField" destination="oJH-BP-DXt" id="WfA-5k-cHj"/>
+                        <outlet property="weightTextField" destination="aGJ-7C-46G" id="lxo-KC-RsV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DUT-H1-Sg4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="678.41726618705036" y="1290.6474820143885"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="leC-tW-WgX"/>
-        <segue reference="I19-W7-B3x"/>
+        <segue reference="Bgc-uw-TYG"/>
+        <segue reference="U1w-Da-G6H"/>
+        <segue reference="adD-Jj-AC3"/>
     </inferredMetricsTieBreakers>
 </document>

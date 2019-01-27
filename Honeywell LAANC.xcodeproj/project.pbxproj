@@ -14,6 +14,8 @@
 		6EAA556C219E0755009A0E70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EAA556B219E0755009A0E70 /* Assets.xcassets */; };
 		6EAA556F219E0755009A0E70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EAA556D219E0755009A0E70 /* LaunchScreen.storyboard */; };
 		6EAA5578219E0E26009A0E70 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EAA5577219E0E26009A0E70 /* MapKit.framework */; };
+		EED590C921FE0D2E00702A79 /* MyDronesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED590C821FE0D2E00702A79 /* MyDronesViewController.swift */; };
+		EED590CB21FE0FED00702A79 /* AddDroneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED590CA21FE0FED00702A79 /* AddDroneViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		6EAA556E219E0755009A0E70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6EAA5570219E0755009A0E70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EAA5577219E0E26009A0E70 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EED590C821FE0D2E00702A79 /* MyDronesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDronesViewController.swift; sourceTree = "<group>"; };
+		EED590CA21FE0FED00702A79 /* AddDroneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDroneViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,8 @@
 				6EAA556D219E0755009A0E70 /* LaunchScreen.storyboard */,
 				6EAA5570219E0755009A0E70 /* Info.plist */,
 				6EAA5568219E0753009A0E70 /* Honeywell_LAANC.xcdatamodeld */,
+				EED590C821FE0D2E00702A79 /* MyDronesViewController.swift */,
+				EED590CA21FE0FED00702A79 /* AddDroneViewController.swift */,
 			);
 			path = "Honeywell LAANC";
 			sourceTree = "<group>";
@@ -155,9 +161,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EED590CB21FE0FED00702A79 /* AddDroneViewController.swift in Sources */,
 				6EAA5564219E0753009A0E70 /* ViewController.swift in Sources */,
 				6EAA5562219E0753009A0E70 /* AppDelegate.swift in Sources */,
 				6EAA556A219E0753009A0E70 /* Honeywell_LAANC.xcdatamodeld in Sources */,
+				EED590C921FE0D2E00702A79 /* MyDronesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
