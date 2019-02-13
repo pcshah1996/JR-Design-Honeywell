@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,9 @@
 		6EBFC34821FE7DA0006CE3A2 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBFC34721FE7DA0006CE3A2 /* LandingViewController.swift */; };
 		6EBFC34B21FE861A006CE3A2 /* AddDroneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBFC34921FE8619006CE3A2 /* AddDroneViewController.swift */; };
 		6EBFC34C21FE861A006CE3A2 /* MyDronesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBFC34A21FE8619006CE3A2 /* MyDronesViewController.swift */; };
+		B5F684F5221394C400C5FB12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F684F4221394C400C5FB12 /* ViewController.swift */; };
+		B5F684F72213951100C5FB12 /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F684F62213951100C5FB12 /* Places.swift */; };
+		B5F684FB2213961300C5FB12 /* Places.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5F684FA2213961300C5FB12 /* Places.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		6EBFC34721FE7DA0006CE3A2 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		6EBFC34921FE8619006CE3A2 /* AddDroneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDroneViewController.swift; sourceTree = "<group>"; };
 		6EBFC34A21FE8619006CE3A2 /* MyDronesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDronesViewController.swift; sourceTree = "<group>"; };
+		B5F684F4221394C400C5FB12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B5F684F62213951100C5FB12 /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
+		B5F684FA2213961300C5FB12 /* Places.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Places.plist; path = ../../../Downloads/MapKitDemo/Places.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +86,10 @@
 		6EAA5560219E0753009A0E70 /* Honeywell LAANC */ = {
 			isa = PBXGroup;
 			children = (
+				B5F684F62213951100C5FB12 /* Places.swift */,
 				6EAA5561219E0753009A0E70 /* AppDelegate.swift */,
 				6EBFC33921FB66C5006CE3A2 /* MainViewController.swift */,
+				B5F684FA2213961300C5FB12 /* Places.plist */,
 				6EBFC33A21FB66C5006CE3A2 /* LoadingViewController.swift */,
 				6EBFC33B21FB66C6006CE3A2 /* LoginViewController.swift */,
 				6EBFC33C21FB66C6006CE3A2 /* SecretsViewController.swift */,
@@ -97,6 +105,7 @@
 				6EBFC34721FE7DA0006CE3A2 /* LandingViewController.swift */,
 				6EBFC34A21FE8619006CE3A2 /* MyDronesViewController.swift */,
 				6EBFC34921FE8619006CE3A2 /* AddDroneViewController.swift */,
+				B5F684F4221394C400C5FB12 /* ViewController.swift */,
 			);
 			path = "Honeywell LAANC";
 			sourceTree = "<group>";
@@ -149,6 +158,7 @@
 				TargetAttributes = {
 					6EAA555D219E0753009A0E70 = {
 						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 1;
@@ -158,7 +168,7 @@
 				};
 			};
 			buildConfigurationList = 6EAA5559219E0752009A0E70 /* Build configuration list for PBXProject "Honeywell LAANC" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -182,6 +192,7 @@
 			files = (
 				6EAA556F219E0755009A0E70 /* LaunchScreen.storyboard in Resources */,
 				6EAA556C219E0755009A0E70 /* Assets.xcassets in Resources */,
+				B5F684FB2213961300C5FB12 /* Places.plist in Resources */,
 				6EAA5567219E0753009A0E70 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,6 +208,8 @@
 				6EBFC34421FB66C6006CE3A2 /* SecretsLoginViewController.swift in Sources */,
 				6EBFC34821FE7DA0006CE3A2 /* LandingViewController.swift in Sources */,
 				6EBFC34321FB66C6006CE3A2 /* SecretsLoadingViewController.swift in Sources */,
+				B5F684F5221394C400C5FB12 /* ViewController.swift in Sources */,
+				B5F684F72213951100C5FB12 /* Places.swift in Sources */,
 				6EAA5562219E0753009A0E70 /* AppDelegate.swift in Sources */,
 				6EBFC34C21FE861A006CE3A2 /* MyDronesViewController.swift in Sources */,
 				6EBFC34621FE76EC006CE3A2 /* RegistrationViewController.swift in Sources */,
@@ -355,10 +368,7 @@
 				DEVELOPMENT_TEAM = 87GHM986NK;
 				INFOPLIST_FILE = "Honeywell LAANC/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "paris.ideas.Honeywell-LAANC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -374,10 +384,7 @@
 				DEVELOPMENT_TEAM = 87GHM986NK;
 				INFOPLIST_FILE = "Honeywell LAANC/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "paris.ideas.Honeywell-LAANC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
