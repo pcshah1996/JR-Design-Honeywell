@@ -264,18 +264,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xf-Ip-CxQ">
-                                <rect key="frame" x="234" y="369" width="300" height="51"/>
-                                <color key="backgroundColor" red="0.1247563709" green="0.42891558810000002" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="DL1-ij-W9P"/>
-                                    <constraint firstAttribute="height" constant="51" id="qYi-fC-mfs"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Create Flight Plan">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDL-Ic-mpX">
                                 <rect key="frame" x="234" y="487" width="300" height="51"/>
                                 <color key="backgroundColor" red="0.1247563709" green="0.42891558810000002" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -354,6 +342,21 @@
                                 </state>
                                 <connections>
                                     <action selector="logoutPressed:" destination="zbf-Y4-eMx" eventType="touchUpInside" id="gov-Hh-orc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xf-Ip-CxQ">
+                                <rect key="frame" x="234" y="369" width="300" height="51"/>
+                                <color key="backgroundColor" red="0.1247563709" green="0.42891558810000002" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="DL1-ij-W9P"/>
+                                    <constraint firstAttribute="height" constant="51" id="qYi-fC-mfs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Create Flight Plan">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1sk-a3-8Fk" kind="show" id="S5e-pb-0y0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -999,12 +1002,41 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
             </objects>
             <point key="canvasLocation" x="-648" y="1586"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="RHQ-sg-xu5">
+            <objects>
+                <viewController id="c0h-Pe-w1G" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4wv-za-DnV">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="IX3-eD-92F"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3QD-wr-sBW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="gKE-Rs-Nzv">
+            <objects>
+                <viewController id="1sk-a3-8Fk" customClass="MapViewController" customModule="Honeywell_LAANC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Xe-ZO-Qey">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="QHr-tf-uyp"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Vt-it-qQT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <resources>
         <image name="fixed_logo" width="374.8800048828125" height="374.8800048828125"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="iIc-mp-sbr"/>
         <segue reference="fO2-XK-ew8"/>
-        <segue reference="OCY-3d-Yjb"/>
+        <segue reference="xRZ-py-lVl"/>
     </inferredMetricsTieBreakers>
 </document>
