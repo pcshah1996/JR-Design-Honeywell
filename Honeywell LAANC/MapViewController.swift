@@ -22,25 +22,19 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    //    func mapView(_ mapView: GMSMapView, didBeginDragging marker: GMSMarker) {
-    //        print(marker.position)
-    //        print("HELLO")
-    //    }
-    
     override func loadView() {
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
+        let camera = GMSCameraPosition.camera(withLatitude: 33.773980, longitude: -84.383950, zoom: 14.0)
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         mapView.settings.scrollGestures = false
         
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
-        marker.map = mapView
-        marker.isDraggable = true
-        
         mapView.delegate = self
         view = mapView
+    }
+    
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        let marker = GMSMarker(position: coordinate)
+        marker.map = mapView
+        marker.isDraggable = true
     }
     
     func mapView(_ mapView: GMSMapView, didBeginDragging marker: GMSMarker) {
