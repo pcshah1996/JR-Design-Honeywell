@@ -10,7 +10,6 @@ import UIKit
 import GoogleMaps
 
 
-
 class MapViewController: UIViewController, GMSMapViewDelegate {
     
     //var mapView: GMSMapView!
@@ -25,10 +24,16 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     override func loadView() {
         let camera = GMSCameraPosition.camera(withLatitude: 33.773980, longitude: -84.383950, zoom: 14.0)
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        mapView.settings.scrollGestures = false
         
         mapView.delegate = self
         view = mapView
+        
+        let clearButton = UIButton(frame: CGRect(x: 10, y: 10, width: 150, height: 100))
+        clearButton.setTitle("Clear", for: .normal)
+        clearButton.setTitleColor(.black , for: .normal)
+        clearButton.backgroundColor = .white
+        clearButton.addTarget(self, action: #selector(clearMap), for: .touchDown)
+        self.view.addSubview(clearButton)
     }
     
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
@@ -58,6 +63,11 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         }
         let polygon = GMSPolygon(path: polypath)
         polygon.map = mapView
+    }
+    
+    @objc func clearMap(sender: UIButton!) {
+        mapView.clear()
+        coordinates.removeAll()
     }
     
     
