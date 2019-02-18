@@ -13,6 +13,9 @@
 		6EAA556C219E0755009A0E70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EAA556B219E0755009A0E70 /* Assets.xcassets */; };
 		6EAA556F219E0755009A0E70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EAA556D219E0755009A0E70 /* LaunchScreen.storyboard */; };
 		6EAA5578219E0E26009A0E70 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EAA5577219E0E26009A0E70 /* MapKit.framework */; };
+		6EB62DD5221B30FB003F7368 /* CoreMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB62DD4221B30FB003F7368 /* CoreMapViewController.swift */; };
+		6EB62DD7221B324A003F7368 /* PathUtilDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB62DD6221B324A003F7368 /* PathUtilDrawer.swift */; };
+		6EB62DD9221B3266003F7368 /* CanvasOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB62DD8221B3266003F7368 /* CanvasOverlay.swift */; };
 		6EBFC33821FB6661006CE3A2 /* AUAuthNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBFC33721FB6661006CE3A2 /* AUAuthNavigator.swift */; };
 		6EBFC33F21FB66C6006CE3A2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBFC33921FB66C5006CE3A2 /* MainViewController.swift */; };
 		6EBFC34021FB66C6006CE3A2 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBFC33A21FB66C5006CE3A2 /* LoadingViewController.swift */; };
@@ -24,9 +27,12 @@
 		6EBFC34821FE7DA0006CE3A2 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBFC34721FE7DA0006CE3A2 /* LandingViewController.swift */; };
 		6EBFC34B21FE861A006CE3A2 /* AddDroneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBFC34921FE8619006CE3A2 /* AddDroneViewController.swift */; };
 		6EBFC34C21FE861A006CE3A2 /* MyDronesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBFC34A21FE8619006CE3A2 /* MyDronesViewController.swift */; };
+		C36642C280B6935E8BDFD041 /* libPods-Honeywell LAANC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 053295B13CFAD6AF4DE75FF8 /* libPods-Honeywell LAANC.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		053295B13CFAD6AF4DE75FF8 /* libPods-Honeywell LAANC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Honeywell LAANC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FEE07C806F2C9B71BEB40AC /* Pods-Honeywell LAANC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Honeywell LAANC.release.xcconfig"; path = "Pods/Target Support Files/Pods-Honeywell LAANC/Pods-Honeywell LAANC.release.xcconfig"; sourceTree = "<group>"; };
 		6EAA555E219E0753009A0E70 /* Honeywell LAANC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Honeywell LAANC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EAA5561219E0753009A0E70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EAA5566219E0753009A0E70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -35,6 +41,9 @@
 		6EAA556E219E0755009A0E70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6EAA5570219E0755009A0E70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EAA5577219E0E26009A0E70 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6EB62DD4221B30FB003F7368 /* CoreMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMapViewController.swift; sourceTree = "<group>"; };
+		6EB62DD6221B324A003F7368 /* PathUtilDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathUtilDrawer.swift; sourceTree = "<group>"; };
+		6EB62DD8221B3266003F7368 /* CanvasOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasOverlay.swift; sourceTree = "<group>"; };
 		6EBFC33721FB6661006CE3A2 /* AUAuthNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AUAuthNavigator.swift; sourceTree = "<group>"; };
 		6EBFC33921FB66C5006CE3A2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6EBFC33A21FB66C5006CE3A2 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +55,7 @@
 		6EBFC34721FE7DA0006CE3A2 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		6EBFC34921FE8619006CE3A2 /* AddDroneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDroneViewController.swift; sourceTree = "<group>"; };
 		6EBFC34A21FE8619006CE3A2 /* MyDronesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDronesViewController.swift; sourceTree = "<group>"; };
+		D9B42D7C6C004641204B36C4 /* Pods-Honeywell LAANC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Honeywell LAANC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Honeywell LAANC/Pods-Honeywell LAANC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,18 +64,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EAA5578219E0E26009A0E70 /* MapKit.framework in Frameworks */,
+				C36642C280B6935E8BDFD041 /* libPods-Honeywell LAANC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C0A18AD859BC25858EB5748 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D9B42D7C6C004641204B36C4 /* Pods-Honeywell LAANC.debug.xcconfig */,
+				3FEE07C806F2C9B71BEB40AC /* Pods-Honeywell LAANC.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6EAA5555219E0752009A0E70 = {
 			isa = PBXGroup;
 			children = (
 				6EAA5560219E0753009A0E70 /* Honeywell LAANC */,
 				6EAA555F219E0753009A0E70 /* Products */,
 				6EAA5576219E0E26009A0E70 /* Frameworks */,
+				6C0A18AD859BC25858EB5748 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				6EAA5561219E0753009A0E70 /* AppDelegate.swift */,
+				6EB62DD4221B30FB003F7368 /* CoreMapViewController.swift */,
+				6EB62DD6221B324A003F7368 /* PathUtilDrawer.swift */,
+				6EB62DD8221B3266003F7368 /* CanvasOverlay.swift */,
 				6EBFC33921FB66C5006CE3A2 /* MainViewController.swift */,
 				6EBFC33A21FB66C5006CE3A2 /* LoadingViewController.swift */,
 				6EBFC33B21FB66C6006CE3A2 /* LoginViewController.swift */,
@@ -105,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				6EAA5577219E0E26009A0E70 /* MapKit.framework */,
+				053295B13CFAD6AF4DE75FF8 /* libPods-Honeywell LAANC.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -124,9 +149,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6EAA5573219E0755009A0E70 /* Build configuration list for PBXNativeTarget "Honeywell LAANC" */;
 			buildPhases = (
+				E3FEAE9BDBF718DB0E8FD0DF /* [CP] Check Pods Manifest.lock */,
 				6EAA555A219E0753009A0E70 /* Sources */,
 				6EAA555B219E0753009A0E70 /* Frameworks */,
 				6EAA555C219E0753009A0E70 /* Resources */,
+				1B0BD2D681BAB1D39741AAAE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,6 +215,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B0BD2D681BAB1D39741AAAE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Honeywell LAANC/Pods-Honeywell LAANC-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Honeywell LAANC/Pods-Honeywell LAANC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3FEAE9BDBF718DB0E8FD0DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Honeywell LAANC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6EAA555A219E0753009A0E70 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -199,11 +273,14 @@
 				6EBFC34321FB66C6006CE3A2 /* SecretsLoadingViewController.swift in Sources */,
 				6EAA5562219E0753009A0E70 /* AppDelegate.swift in Sources */,
 				6EBFC34C21FE861A006CE3A2 /* MyDronesViewController.swift in Sources */,
+				6EB62DD5221B30FB003F7368 /* CoreMapViewController.swift in Sources */,
 				6EBFC34621FE76EC006CE3A2 /* RegistrationViewController.swift in Sources */,
 				6EAA556A219E0753009A0E70 /* Honeywell_LAANC.xcdatamodeld in Sources */,
 				6EBFC33821FB6661006CE3A2 /* AUAuthNavigator.swift in Sources */,
 				6EBFC33F21FB66C6006CE3A2 /* MainViewController.swift in Sources */,
 				6EBFC34221FB66C6006CE3A2 /* SecretsViewController.swift in Sources */,
+				6EB62DD9221B3266003F7368 /* CanvasOverlay.swift in Sources */,
+				6EB62DD7221B324A003F7368 /* PathUtilDrawer.swift in Sources */,
 				6EBFC34021FB66C6006CE3A2 /* LoadingViewController.swift in Sources */,
 				6EBFC34B21FE861A006CE3A2 /* AddDroneViewController.swift in Sources */,
 			);
@@ -349,6 +426,7 @@
 		};
 		6EAA5574219E0755009A0E70 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9B42D7C6C004641204B36C4 /* Pods-Honeywell LAANC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -368,6 +446,7 @@
 		};
 		6EAA5575219E0755009A0E70 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FEE07C806F2C9B71BEB40AC /* Pods-Honeywell LAANC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
