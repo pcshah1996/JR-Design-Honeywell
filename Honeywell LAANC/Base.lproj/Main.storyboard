@@ -72,6 +72,20 @@
                                     <action selector="cancelDrawingActn:" destination="WVp-c9-Gat" eventType="touchUpInside" id="zGE-qm-GVZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeR-Ql-2zi">
+                                <rect key="frame" x="669" y="30" width="49" height="30"/>
+                                <color key="backgroundColor" red="0.12941176469999999" green="0.52156862749999999" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="MUZ-52-j3P"/>
+                                    <constraint firstAttribute="height" constant="30" id="Ymb-F5-pUg"/>
+                                </constraints>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitFlightPlan:" destination="WVp-c9-Gat" eventType="touchUpInside" id="I0b-g9-UbS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -80,10 +94,12 @@
                             <constraint firstItem="4kj-ez-3i7" firstAttribute="centerX" secondItem="Hyf-Th-8aL" secondAttribute="centerX" id="ACH-UL-jge"/>
                             <constraint firstItem="4kj-ez-3i7" firstAttribute="centerX" secondItem="rbT-Y8-FZn" secondAttribute="centerX" id="DFd-Bo-cEC"/>
                             <constraint firstItem="Hyf-Th-8aL" firstAttribute="bottom" secondItem="rbT-Y8-FZn" secondAttribute="bottom" id="Dkx-gc-dco"/>
+                            <constraint firstItem="VeR-Ql-2zi" firstAttribute="top" secondItem="Esp-sg-Qdq" secondAttribute="top" constant="30" id="III-fz-qXT"/>
                             <constraint firstItem="Hyf-Th-8aL" firstAttribute="trailing" secondItem="8S4-jm-5XB" secondAttribute="trailing" constant="33" id="Je6-ln-wdy"/>
                             <constraint firstItem="rbT-Y8-FZn" firstAttribute="top" secondItem="Hyf-Th-8aL" secondAttribute="top" id="P7N-y3-5fp"/>
                             <constraint firstItem="Hyf-Th-8aL" firstAttribute="bottom" secondItem="8S4-jm-5XB" secondAttribute="bottom" constant="30" id="R9C-8y-k0L"/>
                             <constraint firstItem="4kj-ez-3i7" firstAttribute="centerY" secondItem="8S4-jm-5XB" secondAttribute="centerY" id="Vtd-Es-urB"/>
+                            <constraint firstItem="Hyf-Th-8aL" firstAttribute="trailing" secondItem="VeR-Ql-2zi" secondAttribute="trailing" constant="50" id="fA1-tf-NDV"/>
                             <constraint firstItem="h4C-qT-9sj" firstAttribute="leading" secondItem="rbT-Y8-FZn" secondAttribute="leading" constant="50" id="pg8-QN-wME"/>
                             <constraint firstItem="Hyf-Th-8aL" firstAttribute="trailing" secondItem="rbT-Y8-FZn" secondAttribute="trailing" id="t2i-v2-juL"/>
                             <constraint firstItem="wzx-O1-ppt" firstAttribute="centerX" secondItem="8S4-jm-5XB" secondAttribute="centerX" id="unb-6K-A48"/>
@@ -95,6 +111,7 @@
                         <outlet property="cancelDrawingBtn" destination="8S4-jm-5XB" id="hia-U4-Afr"/>
                         <outlet property="drawBtn" destination="wzx-O1-ppt" id="Xjt-Tl-9In"/>
                         <outlet property="googleMapView" destination="rbT-Y8-FZn" id="hvG-Lg-mbG"/>
+                        <outlet property="heightSlider" destination="4kj-ez-3i7" id="NeG-J5-v55"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vCR-jT-OD0" userLabel="First Responder" sceneMemberID="firstResponder"/>

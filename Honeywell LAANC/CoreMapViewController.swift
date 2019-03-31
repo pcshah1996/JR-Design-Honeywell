@@ -14,6 +14,8 @@ class CoreMapViewController: UIViewController {
     
     @IBOutlet weak var googleMapView: GMSMapView!
     
+    @IBOutlet weak var heightSlider: UISlider!
+    
     @IBOutlet weak var cancelDrawingBtn: UIButton!{
         
         didSet{
@@ -88,10 +90,19 @@ class CoreMapViewController: UIViewController {
         
         super.viewDidLoad()
         googleMapView.delegate = self
-        let target = CLLocationCoordinate2D.init(latitude: 33.773980, longitude: 84.383950)
+        googleMapView.isBuildingsEnabled = true
+        let target = CLLocationCoordinate2D.init(latitude: 33.7490, longitude: -84.3880)
         
-        let cameraPos = GMSCameraPosition(target: target, zoom: 8, bearing: 0, viewingAngle: 0)
+        let cameraPos = GMSCameraPosition(target: target, zoom: 10, bearing: 0, viewingAngle: 45)
         self.googleMapView.animate(to: cameraPos)
+        let path = Bundle.main.path(forResource: "Georgia", ofType: "geojson")
+        let url = URL(fileURLWithPath: path!)
+        let geoJsonParser = GMUGeoJSONParser(url: url)
+        geoJsonParser.parse()
+        
+        let renderer = GMUGeometryRenderer(map: googleMapView, geometries: geoJsonParser.features)
+        
+        renderer.render()
     }
     
     override func didReceiveMemoryWarning() {
@@ -116,20 +127,53 @@ class CoreMapViewController: UIViewController {
         
     }
     
+    
+    
+    @IBAction func submitFlightPlan(_ sender: Any) {
+        
+        var geoJson: [String: Any] = [:]
+        geoJson["type"] = "GeometryCollection"
+        var geometries: [[String: Any]] = []
+        
+        for polygon in userDrawablePolygons {
+            var geometry: [String: Any] = [:]
+            geometry["type"] = "Polygon"
+            
+            var coordinates: [[Float]] = []
+            let path = polygon.path!
+            for i in 0...path.count() {
+                let coordinate = path.coordinate(at: i)
+                coordinates.append([Float(coordinate.latitude), Float(coordinate.longitude)])
+            }
+            geometry["coordinates"] = coordinates
+            
+            
+            geometries.append(geometry)
+        }
+        
+        geoJson["geometries"] = geometries
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: geoJson, options: .prettyPrinted)
+            let jsonString = String(bytes: jsonData, encoding: .ascii)
+            print(jsonString)
+        }catch {
+            print("error")
+        }
+        
+    }
     func addPolyGonInMapView( drawableLoc:[CLLocationCoordinate2D]){
         
         isDrawingModeEnabled = true
         let path = GMSMutablePath()
         for loc in drawableLoc{
-            
             path.add(loc)
-            
         }
         let newpolygon = GMSPolygon(path: path)
         newpolygon.strokeWidth = 3
         newpolygon.strokeColor = UIColor.black
-        newpolygon.fillColor = UIColor.black.withAlphaComponent(0.5)
+        newpolygon.fillColor = UIColor.black.withAlphaComponent(CGFloat(heightSlider!.value))
         newpolygon.map = googleMapView
+        
         if cancelDrawingBtn.isHidden == true{ cancelDrawingBtn.isHidden = false }
         userDrawablePolygons.append(newpolygon)
         addPolygonDeleteAnnotation(endCoordinate: drawableLoc.last!,polygon: newpolygon)
@@ -152,7 +196,6 @@ class CoreMapViewController: UIViewController {
     }
     
     func addPolygonMoveAnnotation(startCoordinate location:CLLocationCoordinate2D,polygon:GMSPolygon){
-        
         let marker = MoveMarker(location: location,polygon: polygon)
         let movePolygonView = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
         movePolygonView.layer.cornerRadius = 15
@@ -241,5 +284,23 @@ extension CoreMapViewController:NotifyTouchEvents{
             move_marker = -1
         }
         createPolygonFromTheDrawablePoints()
+    }
+}
+
+extension UIColor {
+    convenience init(red: Int, green: Int, blue: Int) {
+        assert(red >= 0 && red <= 255, "Invalid red component")
+        assert(green >= 0 && green <= 255, "Invalid green component")
+        assert(blue >= 0 && blue <= 255, "Invalid blue component")
+        
+        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+    }
+    
+    convenience init(rgb: Int) {
+        self.init(
+            red: (rgb >> 16) & 0xFF,
+            green: (rgb >> 8) & 0xFF,
+            blue: rgb & 0xFF
+        )
     }
 }

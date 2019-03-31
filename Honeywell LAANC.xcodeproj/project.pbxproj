@@ -28,6 +28,7 @@
 		6EBFC34B21FE861A006CE3A2 /* AddDroneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBFC34921FE8619006CE3A2 /* AddDroneViewController.swift */; };
 		6EBFC34C21FE861A006CE3A2 /* MyDronesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBFC34A21FE8619006CE3A2 /* MyDronesViewController.swift */; };
 		C36642C280B6935E8BDFD041 /* libPods-Honeywell LAANC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 053295B13CFAD6AF4DE75FF8 /* libPods-Honeywell LAANC.a */; };
+		EE537E8922513CBF003851F3 /* Georgia.geojson in Resources */ = {isa = PBXBuildFile; fileRef = EE537E8822513CBF003851F3 /* Georgia.geojson */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,8 @@
 		6EBFC34921FE8619006CE3A2 /* AddDroneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDroneViewController.swift; sourceTree = "<group>"; };
 		6EBFC34A21FE8619006CE3A2 /* MyDronesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDronesViewController.swift; sourceTree = "<group>"; };
 		D9B42D7C6C004641204B36C4 /* Pods-Honeywell LAANC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Honeywell LAANC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Honeywell LAANC/Pods-Honeywell LAANC.debug.xcconfig"; sourceTree = "<group>"; };
+		EE537E8822513CBF003851F3 /* Georgia.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Georgia.geojson; sourceTree = "<group>"; };
+		EE537E8A22513E24003851F3 /* Honeywell LAANC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Honeywell LAANC-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,7 @@
 				6EBFC33B21FB66C6006CE3A2 /* LoginViewController.swift */,
 				6EBFC33C21FB66C6006CE3A2 /* SecretsViewController.swift */,
 				6EBFC33D21FB66C6006CE3A2 /* SecretsLoadingViewController.swift */,
+				EE537E8822513CBF003851F3 /* Georgia.geojson */,
 				6EBFC33E21FB66C6006CE3A2 /* SecretsLoginViewController.swift */,
 				6EAA5565219E0753009A0E70 /* Main.storyboard */,
 				6EBFC34521FE76EC006CE3A2 /* RegistrationViewController.swift */,
@@ -121,6 +125,7 @@
 				6EBFC34721FE7DA0006CE3A2 /* LandingViewController.swift */,
 				6EBFC34A21FE8619006CE3A2 /* MyDronesViewController.swift */,
 				6EBFC34921FE8619006CE3A2 /* AddDroneViewController.swift */,
+				EE537E8A22513E24003851F3 /* Honeywell LAANC-Bridging-Header.h */,
 			);
 			path = "Honeywell LAANC";
 			sourceTree = "<group>";
@@ -207,6 +212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE537E8922513CBF003851F3 /* Georgia.geojson in Resources */,
 				6EAA556F219E0755009A0E70 /* LaunchScreen.storyboard in Resources */,
 				6EAA556C219E0755009A0E70 /* Assets.xcassets in Resources */,
 				6EAA5567219E0753009A0E70 /* Main.storyboard in Resources */,
@@ -439,6 +445,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "paris.ideas.Honeywell-LAANC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/$(PROJECT_NAME)-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -459,6 +466,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "paris.ideas.Honeywell-LAANC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/$(PROJECT_NAME)-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
