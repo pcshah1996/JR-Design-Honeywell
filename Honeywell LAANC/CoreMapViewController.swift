@@ -14,6 +14,7 @@ class CoreMapViewController: UIViewController {
     
     @IBOutlet weak var googleMapView: GMSMapView!
     
+    @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var heightSlider: UISlider!
     
     @IBOutlet weak var cancelDrawingBtn: UIButton!{
@@ -86,6 +87,11 @@ class CoreMapViewController: UIViewController {
     var move_marker = -1
     var move_idx = -1
     
+    @IBAction func sliderDidChange(_ sender: Any) {
+
+        heightLabel.text = "\(Int(heightSlider.value * 400)) ft"
+        
+    }
     override func viewDidLoad() {
         
         super.viewDidLoad()
