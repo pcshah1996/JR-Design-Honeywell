@@ -12,4 +12,6 @@
 #import <Google-Maps-iOS-Utils/GMUGeometryRenderer.h>
 #import <Google-Maps-iOS-Utils/GMUGeoJSONParser.h>
 
+#import "SWRevealViewController.h"
+
 #endif /* Honeywell_LAANC_Bridging_Header_h */

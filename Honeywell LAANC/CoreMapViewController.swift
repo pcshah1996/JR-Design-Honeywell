@@ -14,6 +14,7 @@ class CoreMapViewController: UIViewController {
     
     @IBOutlet weak var googleMapView: GMSMapView!
     
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var heightSlider: UISlider!
     
@@ -95,6 +96,8 @@ class CoreMapViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        sideMenus()
+
         googleMapView.delegate = self
         googleMapView.isBuildingsEnabled = true
         let target = CLLocationCoordinate2D.init(latitude: 33.7490, longitude: -84.3880)
@@ -167,6 +170,23 @@ class CoreMapViewController: UIViewController {
         }
         
     }
+    
+    func sideMenus() {
+        
+        if revealViewController() != nil {
+            
+            menuButton.target = revealViewController()
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+            revealViewController().rearViewRevealWidth = 275
+            revealViewController().rightViewRevealWidth = 160
+            
+            
+            
+            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            
+        }
+    }
+    
     func addPolyGonInMapView( drawableLoc:[CLLocationCoordinate2D]){
         
         isDrawingModeEnabled = true
