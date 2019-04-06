@@ -16,8 +16,6 @@ class MainViewController: UIViewController, AUAuthenticatable {
     
     static let authNavigator = AUAuthNavigator()
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
