@@ -11,6 +11,7 @@ import UIKit
 class ApprovedFlightPlansViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var flights: [SavedFlightObject] = []
+    var selectedIndex: Int = -1
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return flights.count
@@ -26,6 +27,22 @@ class ApprovedFlightPlansViewController: UIViewController, UITableViewDataSource
         cell?.textLabel?.text = flights[indexPath.row].flightName
         cell?.detailTextLabel?.text = flights[indexPath.row].startDate.description
         return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        selectedIndex = indexPath.row
+        
+        self.performSegue(withIdentifier: "showFlightDetails", sender: self)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is ApprovedFlightPlanViewController {
+            if let vc = segue.destination as? ApprovedFlightPlanViewController {
+                vc.flightPlan = flights[selectedIndex]
+            }
+        }
     }
     
 

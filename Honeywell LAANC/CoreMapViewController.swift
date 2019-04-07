@@ -150,13 +150,14 @@ class CoreMapViewController: UIViewController {
     @IBAction func submitFlightPlan(_ sender: Any) {
         
         
-        var userFlightLocations: [[[Float]]] = []
+        var userFlightLocations: [[[CLLocationDegrees]]] = []
         for flight in userDrawablePolygons {
             let path = flight.path!
-            var pathArr: [[Float]] = []
-            for i in 0...path.count() {
+            var pathArr: [[CLLocationDegrees]] = []
+            for i in 0...(path.count() - 1) {
                 let coordinate = path.coordinate(at: i)
-                pathArr.append([Float(coordinate.latitude), Float(coordinate.longitude)])
+                
+                pathArr.append([coordinate.latitude, coordinate.longitude])
             }
             userFlightLocations.append(pathArr)
         }

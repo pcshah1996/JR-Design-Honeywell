@@ -15,11 +15,11 @@ class SavedFlightObject: NSObject, NSCoding {
     var endDate: Date = Date.distantPast
     var drone: [String:String] = [:]
     
-    var userFlightLocations: [[[Float]]] = []
+    var userFlightLocations: [[[CLLocationDegrees]]] = []
     
     var heights: [Int] = []
     
-    init(flightName: String, startDate: Date, endDate: Date, drone: [String:String], userFlightLocations: [[[Float]]], heights: [Int]) {
+    init(flightName: String, startDate: Date, endDate: Date, drone: [String:String], userFlightLocations: [[[CLLocationDegrees]]], heights: [Int]) {
         self.flightName = flightName
         self.startDate = startDate
         self.endDate = endDate
@@ -33,7 +33,7 @@ class SavedFlightObject: NSObject, NSCoding {
         startDate = aDecoder.decodeObject(forKey: "startDate") as! Date
         endDate = aDecoder.decodeObject(forKey: "endDate") as! Date
         drone = aDecoder.decodeObject(forKey: "drone") as! [String:String]
-        userFlightLocations = aDecoder.decodeObject(forKey: "userFlightLocations") as! [[[Float]]]
+        userFlightLocations = aDecoder.decodeObject(forKey: "userFlightLocations") as! [[[CLLocationDegrees]]]
         heights = aDecoder.decodeObject(forKey: "heights") as! [Int]
     }
     
