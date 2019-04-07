@@ -30,6 +30,8 @@
 		C36642C280B6935E8BDFD041 /* libPods-Honeywell LAANC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 053295B13CFAD6AF4DE75FF8 /* libPods-Honeywell LAANC.a */; };
 		EE537E8922513CBF003851F3 /* Georgia.geojson in Resources */ = {isa = PBXBuildFile; fileRef = EE537E8822513CBF003851F3 /* Georgia.geojson */; };
 		EE9093982253EE2700CCC2EB /* CreateFlightPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9093972253EE2700CCC2EB /* CreateFlightPlanViewController.swift */; };
+		EE909426225985BD00F88843 /* SavedFlightObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE909425225985BD00F88843 /* SavedFlightObject.swift */; };
+		EE9094282259929100F88843 /* ApprovedFlightPlansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9094272259929100F88843 /* ApprovedFlightPlansViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +63,8 @@
 		EE537E8822513CBF003851F3 /* Georgia.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Georgia.geojson; sourceTree = "<group>"; };
 		EE537E8A22513E24003851F3 /* Honeywell LAANC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Honeywell LAANC-Bridging-Header.h"; sourceTree = "<group>"; };
 		EE9093972253EE2700CCC2EB /* CreateFlightPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFlightPlanViewController.swift; sourceTree = "<group>"; };
+		EE909425225985BD00F88843 /* SavedFlightObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedFlightObject.swift; sourceTree = "<group>"; };
+		EE9094272259929100F88843 /* ApprovedFlightPlansViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovedFlightPlansViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,8 @@
 				6EBFC34921FE8619006CE3A2 /* AddDroneViewController.swift */,
 				EE537E8A22513E24003851F3 /* Honeywell LAANC-Bridging-Header.h */,
 				EE9093972253EE2700CCC2EB /* CreateFlightPlanViewController.swift */,
+				EE909425225985BD00F88843 /* SavedFlightObject.swift */,
+				EE9094272259929100F88843 /* ApprovedFlightPlansViewController.swift */,
 			);
 			path = "Honeywell LAANC";
 			sourceTree = "<group>";
@@ -280,9 +286,11 @@
 				6EBFC34421FB66C6006CE3A2 /* SecretsLoginViewController.swift in Sources */,
 				6EBFC34821FE7DA0006CE3A2 /* LandingViewController.swift in Sources */,
 				6EBFC34321FB66C6006CE3A2 /* SecretsLoadingViewController.swift in Sources */,
+				EE909426225985BD00F88843 /* SavedFlightObject.swift in Sources */,
 				EE9093982253EE2700CCC2EB /* CreateFlightPlanViewController.swift in Sources */,
 				6EAA5562219E0753009A0E70 /* AppDelegate.swift in Sources */,
 				6EBFC34C21FE861A006CE3A2 /* MyDronesViewController.swift in Sources */,
+				EE9094282259929100F88843 /* ApprovedFlightPlansViewController.swift in Sources */,
 				6EB62DD5221B30FB003F7368 /* CoreMapViewController.swift in Sources */,
 				6EBFC34621FE76EC006CE3A2 /* RegistrationViewController.swift in Sources */,
 				6EAA556A219E0753009A0E70 /* Honeywell_LAANC.xcdatamodeld in Sources */,

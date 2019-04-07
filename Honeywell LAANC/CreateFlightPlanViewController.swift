@@ -74,13 +74,24 @@ class CreateFlightPlanViewController: UIViewController, UITableViewDelegate, UIT
     
     @IBAction func nextPartOfFlightPlan(_ sender: Any) {
         
-        let flight = flightName.text
-        let startFlight = flightStart.date
-        let endFlight = flightEnd.date
-        let selectedDrone = droneArray[currentSelection]
+//        let flight = flightName.text
+//        let startFlight = flightStart.date
+//        let endFlight = flightEnd.date
+//        let selectedDrone = droneArray[currentSelection]
         
         self.performSegue(withIdentifier: "showMapView", sender: self)
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is CoreMapViewController {
+            if let vc = segue.destination as? CoreMapViewController {
+                vc.startDate = flightStart.date
+                vc.endDate = flightEnd.date
+                vc.drone = droneArray[currentSelection] as! [String:String]
+                vc.flightName = flightName.text!
+            }
+        }
     }
     
     /*

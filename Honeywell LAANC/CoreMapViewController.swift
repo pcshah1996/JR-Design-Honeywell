@@ -14,10 +14,16 @@ class CoreMapViewController: UIViewController {
     
     @IBOutlet weak var googleMapView: GMSMapView!
     
+    var flightName: String = ""
+    var startDate: Date = Date.distantPast
+    var endDate: Date = Date.distantPast
+    var drone: [String:String] = [:]
+    
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var heightSlider: UISlider!
     
     @IBOutlet weak var cancelDrawingBtn: UIButton!{
+        
         
         didSet{
             
@@ -31,6 +37,11 @@ class CoreMapViewController: UIViewController {
         }
     }
     
+    @IBAction func backAction(_ sender: Any) {
+    
+        self.dismiss(animated: true, completion: nil)
+    
+    }
     @IBAction func cancelDrawingActn(_ sender: AnyObject?) {
         
         isDrawingModeEnabled = false
@@ -82,6 +93,7 @@ class CoreMapViewController: UIViewController {
     var isDrawingModeEnabled = false
     var coordinates = [CLLocationCoordinate2D]()
     var userDrawablePolygons = [GMSPolygon]()
+    var heights: [Int] = []
     var polygonDeleteMarkers = [DeleteMarker]()
     var polygonMoveMarkers = [MoveMarker]()
     var move_marker = -1
@@ -137,34 +149,36 @@ class CoreMapViewController: UIViewController {
     
     @IBAction func submitFlightPlan(_ sender: Any) {
         
-        var geoJson: [String: Any] = [:]
-        geoJson["type"] = "GeometryCollection"
-        var geometries: [[String: Any]] = []
         
-        for polygon in userDrawablePolygons {
-            var geometry: [String: Any] = [:]
-            geometry["type"] = "Polygon"
-            
-            var coordinates: [[Float]] = []
-            let path = polygon.path!
+        var userFlightLocations: [[[Float]]] = []
+        for flight in userDrawablePolygons {
+            let path = flight.path!
+            var pathArr: [[Float]] = []
             for i in 0...path.count() {
                 let coordinate = path.coordinate(at: i)
-                coordinates.append([Float(coordinate.latitude), Float(coordinate.longitude)])
+                pathArr.append([Float(coordinate.latitude), Float(coordinate.longitude)])
             }
-            geometry["coordinates"] = coordinates
-            
-            
-            geometries.append(geometry)
+            userFlightLocations.append(pathArr)
         }
         
-        geoJson["geometries"] = geometries
-        do {
-            let jsonData = try JSONSerialization.data(withJSONObject: geoJson, options: .prettyPrinted)
-            let jsonString = String(bytes: jsonData, encoding: .ascii)
-            print(jsonString)
-        }catch {
-            print("error")
+        let savedFlightPlan: SavedFlightObject = SavedFlightObject(flightName: flightName, startDate: startDate, endDate: endDate, drone: drone, userFlightLocations: userFlightLocations, heights: heights)
+        
+        
+        let decoded = (UserDefaults.standard.value(forKey: "flights") as? Data)
+        var savedFlights: [SavedFlightObject] = []
+        if let decodedValues = decoded {
+            savedFlights = NSKeyedUnarchiver.unarchiveObject(with: decodedValues) as! [SavedFlightObject]
         }
+        let newFlightArray: NSMutableArray! = []
+        for flight in savedFlights {
+            newFlightArray.add(flight)
+        }
+        newFlightArray.add(savedFlightPlan)
+        print("Added")
+        let encodedData = NSKeyedArchiver.archivedData(withRootObject: newFlightArray)
+        UserDefaults.standard.setValue(encodedData, forKey: "flights")
+        
+
         
     }
     func addPolyGonInMapView( drawableLoc:[CLLocationCoordinate2D]){
@@ -182,6 +196,7 @@ class CoreMapViewController: UIViewController {
         
         if cancelDrawingBtn.isHidden == true{ cancelDrawingBtn.isHidden = false }
         userDrawablePolygons.append(newpolygon)
+        heights.append(Int(heightSlider.value * 400))
         addPolygonDeleteAnnotation(endCoordinate: drawableLoc.last!,polygon: newpolygon)
         addPolygonMoveAnnotation(startCoordinate: drawableLoc.first!,polygon: newpolygon)
     }
@@ -240,6 +255,7 @@ extension CoreMapViewController:GMSMapViewDelegate{
             if let index = userDrawablePolygons.index(of: deletemarker.drawPolygon){
                 
                 userDrawablePolygons.remove(at: index)
+                heights.remove(at: index)
                 
             }
             if let  indexToRemove =  polygonDeleteMarkers.index(of: deletemarker){
