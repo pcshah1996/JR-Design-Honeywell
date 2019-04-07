@@ -178,6 +178,8 @@ class CoreMapViewController: UIViewController {
         let encodedData = NSKeyedArchiver.archivedData(withRootObject: newFlightArray)
         UserDefaults.standard.setValue(encodedData, forKey: "flights")
         
+        self.performSegue(withIdentifier: "finishSubmit", sender: self)
+        
 
         
     }

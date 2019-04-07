@@ -127,6 +127,7 @@
                         <outlet property="googleMapView" destination="rbT-Y8-FZn" id="hvG-Lg-mbG"/>
                         <outlet property="heightLabel" destination="vVa-XH-r1U" id="tmM-Ii-KjH"/>
                         <outlet property="heightSlider" destination="4kj-ez-3i7" id="NeG-J5-v55"/>
+                        <segue destination="zbf-Y4-eMx" kind="presentation" identifier="finishSubmit" id="36s-vA-zU8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vCR-jT-OD0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1142,7 +1143,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="fO2-XK-ew8"/>
-        <segue reference="xRZ-py-lVl"/>
+        <segue reference="36s-vA-zU8"/>
         <segue reference="3Zc-Bh-yim"/>
     </inferredMetricsTieBreakers>
 </document>
