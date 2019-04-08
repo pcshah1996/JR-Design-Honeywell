@@ -12,16 +12,15 @@ import GoogleMaps
 
 class CoreMapViewController: UIViewController {
     
+    let defaults:UserDefaults = UserDefaults.standard
+    
+    
     @IBOutlet weak var googleMapView: GMSMapView!
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var heightSlider: UISlider!
-    @IBAction func longText(_ sender: Any) {
-    }
-    
-    @IBAction func latText(_ sender: Any) {
-    }
+
     @IBOutlet weak var cancelDrawingBtn: UIButton!{
         
         didSet{
@@ -103,10 +102,6 @@ class CoreMapViewController: UIViewController {
         
         super.viewDidLoad()
         
-        
-        super.viewDidLoad()
-        
-        
         sideMenus()
 
         googleMapView.delegate = self
@@ -123,11 +118,39 @@ class CoreMapViewController: UIViewController {
         let renderer = GMUGeometryRenderer(map: googleMapView, geometries: geoJsonParser.features)
         
         renderer.render()
+        
+        drawInputFlightPlan()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // Draws inputs from SidebarViewController
+    func drawInputFlightPlan() {
+        let longVal1 = defaults.double(forKey: "longVal1")
+        let longVal2 = defaults.double(forKey: "longVal2")
+        let longVal3 = defaults.double(forKey: "longVal3")
+        let latVal1 = defaults.double(forKey: "latVal1")
+        let latVal2 = defaults.double(forKey: "latVal2")
+        let latVal3 = defaults.double(forKey: "latVal3")
+        let heightVal = defaults.double(forKey: "heightVal")
+        defaults.set(0, forKey: "longVal1")  //Integer
+        defaults.set(0, forKey: "longVal2")  //Integer
+        defaults.set(0, forKey: "longVal3")  //Integer
+        defaults.set(0, forKey: "latVal1")  //Integer
+        defaults.set(0, forKey: "latVal2")  //Integer
+        defaults.set(0, forKey: "latVal3")  //Integer
+        defaults.set(0, forKey: "heightVal")  //Integer
+        let location1 : CLLocationCoordinate2D = CLLocationCoordinate2DMake(latVal1, -longVal1)
+        let location2 : CLLocationCoordinate2D = CLLocationCoordinate2DMake(latVal2, -longVal2)
+        let location3 : CLLocationCoordinate2D = CLLocationCoordinate2DMake(latVal3, -longVal3)
+        self.coordinates.append(location1)
+        self.coordinates.append(location2)
+        self.coordinates.append(location3)
+        addPolyGonInMapView(drawableLoc: coordinates)
+        coordinates = []
     }
     
     func createPolygonFromTheDrawablePoints(){

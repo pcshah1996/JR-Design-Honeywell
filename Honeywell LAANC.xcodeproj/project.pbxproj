@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0AF65ADB225954860069600C /* MyCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF65ADA225954860069600C /* MyCustomCell.swift */; };
+		0AA31CE3225BBC7700C0D614 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA31CE2225BBC7700C0D614 /* SWRevealViewController.m */; };
 		6EAA5562219E0753009A0E70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAA5561219E0753009A0E70 /* AppDelegate.swift */; };
 		6EAA5567219E0753009A0E70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EAA5565219E0753009A0E70 /* Main.storyboard */; };
 		6EAA556A219E0753009A0E70 /* Honeywell_LAANC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6EAA5568219E0753009A0E70 /* Honeywell_LAANC.xcdatamodeld */; };
@@ -28,9 +28,6 @@
 		6EBFC34821FE7DA0006CE3A2 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBFC34721FE7DA0006CE3A2 /* LandingViewController.swift */; };
 		6EBFC34B21FE861A006CE3A2 /* AddDroneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBFC34921FE8619006CE3A2 /* AddDroneViewController.swift */; };
 		6EBFC34C21FE861A006CE3A2 /* MyDronesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBFC34A21FE8619006CE3A2 /* MyDronesViewController.swift */; };
-		70B204E4225A8D0400FF99B1 /* LongLatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B204E3225A8D0400FF99B1 /* LongLatTableViewController.swift */; };
-		70B204E6225A8EFD00FF99B1 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B204E5225A8EFD00FF99B1 /* SWRevealViewController.m */; };
-		70B204EB225A9D2200FF99B1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B204EA225A9D2200FF99B1 /* TableViewController.swift */; };
 		70B204EF225ABDC900FF99B1 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B204EE225ABDC900FF99B1 /* SidebarViewController.swift */; };
 		C36642C280B6935E8BDFD041 /* libPods-Honeywell LAANC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 053295B13CFAD6AF4DE75FF8 /* libPods-Honeywell LAANC.a */; };
 		EE537E8922513CBF003851F3 /* Georgia.geojson in Resources */ = {isa = PBXBuildFile; fileRef = EE537E8822513CBF003851F3 /* Georgia.geojson */; };
@@ -39,7 +36,8 @@
 
 /* Begin PBXFileReference section */
 		053295B13CFAD6AF4DE75FF8 /* libPods-Honeywell LAANC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Honeywell LAANC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0AF65ADA225954860069600C /* MyCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomCell.swift; sourceTree = "<group>"; };
+		0AA31CE1225BBC7700C0D614 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = ../../../Downloads/SideMenuTutorial/SideMenuTutorial/SWRevealViewController.h; sourceTree = "<group>"; };
+		0AA31CE2225BBC7700C0D614 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = ../../../Downloads/SideMenuTutorial/SideMenuTutorial/SWRevealViewController.m; sourceTree = "<group>"; };
 		3FEE07C806F2C9B71BEB40AC /* Pods-Honeywell LAANC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Honeywell LAANC.release.xcconfig"; path = "Pods/Target Support Files/Pods-Honeywell LAANC/Pods-Honeywell LAANC.release.xcconfig"; sourceTree = "<group>"; };
 		6EAA555E219E0753009A0E70 /* Honeywell LAANC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Honeywell LAANC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EAA5561219E0753009A0E70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,10 +61,6 @@
 		6EBFC34721FE7DA0006CE3A2 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		6EBFC34921FE8619006CE3A2 /* AddDroneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDroneViewController.swift; sourceTree = "<group>"; };
 		6EBFC34A21FE8619006CE3A2 /* MyDronesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDronesViewController.swift; sourceTree = "<group>"; };
-		70B204E3225A8D0400FF99B1 /* LongLatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongLatTableViewController.swift; sourceTree = "<group>"; };
-		70B204E5225A8EFD00FF99B1 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = ../../Downloads/SideMenuTutorial/SideMenuTutorial/SWRevealViewController.m; sourceTree = "<group>"; };
-		70B204E7225A8F1000FF99B1 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = ../../Downloads/SideMenuTutorial/SideMenuTutorial/SWRevealViewController.h; sourceTree = "<group>"; };
-		70B204EA225A9D2200FF99B1 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		70B204EE225ABDC900FF99B1 /* SidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
 		D9B42D7C6C004641204B36C4 /* Pods-Honeywell LAANC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Honeywell LAANC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Honeywell LAANC/Pods-Honeywell LAANC.debug.xcconfig"; sourceTree = "<group>"; };
 		EE537E8822513CBF003851F3 /* Georgia.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Georgia.geojson; sourceTree = "<group>"; };
@@ -117,22 +111,20 @@
 		6EAA5560219E0753009A0E70 /* Honeywell LAANC */ = {
 			isa = PBXGroup;
 			children = (
-				70B204EA225A9D2200FF99B1 /* TableViewController.swift */,
 				6EAA5561219E0753009A0E70 /* AppDelegate.swift */,
 				6EB62DD4221B30FB003F7368 /* CoreMapViewController.swift */,
 				6EB62DD6221B324A003F7368 /* PathUtilDrawer.swift */,
 				6EB62DD8221B3266003F7368 /* CanvasOverlay.swift */,
 				6EBFC33921FB66C5006CE3A2 /* MainViewController.swift */,
+				0AA31CE1225BBC7700C0D614 /* SWRevealViewController.h */,
+				0AA31CE2225BBC7700C0D614 /* SWRevealViewController.m */,
 				6EBFC33A21FB66C5006CE3A2 /* LoadingViewController.swift */,
 				6EBFC33B21FB66C6006CE3A2 /* LoginViewController.swift */,
 				6EBFC33C21FB66C6006CE3A2 /* SecretsViewController.swift */,
-				70B204E5225A8EFD00FF99B1 /* SWRevealViewController.m */,
 				6EBFC33D21FB66C6006CE3A2 /* SecretsLoadingViewController.swift */,
-				70B204E7225A8F1000FF99B1 /* SWRevealViewController.h */,
 				EE537E8822513CBF003851F3 /* Georgia.geojson */,
 				6EBFC33E21FB66C6006CE3A2 /* SecretsLoginViewController.swift */,
 				6EAA5565219E0753009A0E70 /* Main.storyboard */,
-				70B204E3225A8D0400FF99B1 /* LongLatTableViewController.swift */,
 				6EBFC34521FE76EC006CE3A2 /* RegistrationViewController.swift */,
 				6EBFC33621FB6661006CE3A2 /* AuthNavigation */,
 				6EAA556B219E0755009A0E70 /* Assets.xcassets */,
@@ -144,7 +136,6 @@
 				6EBFC34921FE8619006CE3A2 /* AddDroneViewController.swift */,
 				EE537E8A22513E24003851F3 /* Honeywell LAANC-Bridging-Header.h */,
 				EE9093972253EE2700CCC2EB /* CreateFlightPlanViewController.swift */,
-				0AF65ADA225954860069600C /* MyCustomCell.swift */,
 				70B204EE225ABDC900FF99B1 /* SidebarViewController.swift */,
 			);
 			path = "Honeywell LAANC";
@@ -294,14 +285,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EBFC34121FB66C6006CE3A2 /* LoginViewController.swift in Sources */,
-				70B204EB225A9D2200FF99B1 /* TableViewController.swift in Sources */,
 				6EBFC34421FB66C6006CE3A2 /* SecretsLoginViewController.swift in Sources */,
 				6EBFC34821FE7DA0006CE3A2 /* LandingViewController.swift in Sources */,
 				6EBFC34321FB66C6006CE3A2 /* SecretsLoadingViewController.swift in Sources */,
 				EE9093982253EE2700CCC2EB /* CreateFlightPlanViewController.swift in Sources */,
-				0AF65ADB225954860069600C /* MyCustomCell.swift in Sources */,
 				6EAA5562219E0753009A0E70 /* AppDelegate.swift in Sources */,
-				70B204E6225A8EFD00FF99B1 /* SWRevealViewController.m in Sources */,
 				70B204EF225ABDC900FF99B1 /* SidebarViewController.swift in Sources */,
 				6EBFC34C21FE861A006CE3A2 /* MyDronesViewController.swift in Sources */,
 				6EB62DD5221B30FB003F7368 /* CoreMapViewController.swift in Sources */,
@@ -309,10 +297,10 @@
 				6EAA556A219E0753009A0E70 /* Honeywell_LAANC.xcdatamodeld in Sources */,
 				6EBFC33821FB6661006CE3A2 /* AUAuthNavigator.swift in Sources */,
 				6EBFC33F21FB66C6006CE3A2 /* MainViewController.swift in Sources */,
-				70B204E4225A8D0400FF99B1 /* LongLatTableViewController.swift in Sources */,
 				6EBFC34221FB66C6006CE3A2 /* SecretsViewController.swift in Sources */,
 				6EB62DD9221B3266003F7368 /* CanvasOverlay.swift in Sources */,
 				6EB62DD7221B324A003F7368 /* PathUtilDrawer.swift in Sources */,
+				0AA31CE3225BBC7700C0D614 /* SWRevealViewController.m in Sources */,
 				6EBFC34021FB66C6006CE3A2 /* LoadingViewController.swift in Sources */,
 				6EBFC34B21FE861A006CE3A2 /* AddDroneViewController.swift in Sources */,
 			);

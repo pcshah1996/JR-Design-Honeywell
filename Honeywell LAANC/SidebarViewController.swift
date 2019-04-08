@@ -12,6 +12,7 @@ import UIKit
 
 class SidebarViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    let defaults:UserDefaults = UserDefaults.standard
     
     
     var droneArray: NSArray = []
@@ -19,7 +20,31 @@ class SidebarViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
 
+    @IBOutlet weak var longText1: UITextField!
+    @IBOutlet weak var latText1: UITextField!
+    @IBOutlet weak var longText2: UITextField!
+    @IBOutlet weak var latText2: UITextField!
+    @IBOutlet weak var longText3: UITextField!
+    @IBOutlet weak var latText3: UITextField!
+    @IBOutlet weak var heightText: UITextField!
     @IBOutlet weak var coordinatesTableView: UITableView!
+    @IBAction func addCoordinates(_ sender: Any) {
+        let longVal1 = Double(longText1.text!)
+        let longVal2 = Double(longText2.text!)
+        let longVal3 = Double(longText3.text!)
+        let latVal1 = Double(latText1.text!)
+        let latVal2 = Double(latText2.text!)
+        let latVal3 = Double(latText3.text!)
+        let heightVal = Double(heightText.text!)
+        defaults.set(longVal1, forKey: "longVal1")  //Integer
+        defaults.set(longVal2, forKey: "longVal2")  //Integer
+        defaults.set(longVal3, forKey: "longVal3")  //Integer
+        defaults.set(latVal1, forKey: "latVal1")  //Integer
+        defaults.set(latVal2, forKey: "latVal2")  //Integer
+        defaults.set(latVal3, forKey: "latVal3")  //Integer
+        defaults.set(heightVal, forKey: "heightVal")  //Integer
+        self.performSegue(withIdentifier: "showMap", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -67,15 +92,6 @@ class SidebarViewController: UIViewController, UITableViewDelegate, UITableViewD
         // let cell = (tableView.dequeue... as? UITableViewCell) ?? UITableViewCell(style: ...)
         
         return cell!
-    }
-    
-
-    
-    @IBAction func addCoordinates(_ sender: Any) {
-        
-        
-        self.performSegue(withIdentifier: "showMapView", sender: self)
-        
     }
     
     /*
