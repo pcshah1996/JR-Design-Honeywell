@@ -143,6 +143,7 @@ class CoreMapViewController: UIViewController {
         defaults.set(0, forKey: "latVal2")  //Integer
         defaults.set(0, forKey: "latVal3")  //Integer
         defaults.set(0, forKey: "heightVal")  //Integer
+        heightSlider.setValue(Float(heightVal), animated: true)
         let location1 : CLLocationCoordinate2D = CLLocationCoordinate2DMake(latVal1, -longVal1)
         let location2 : CLLocationCoordinate2D = CLLocationCoordinate2DMake(latVal2, -longVal2)
         let location3 : CLLocationCoordinate2D = CLLocationCoordinate2DMake(latVal3, -longVal3)
@@ -231,7 +232,7 @@ class CoreMapViewController: UIViewController {
         let newpolygon = GMSPolygon(path: path)
         newpolygon.strokeWidth = 3
         newpolygon.strokeColor = UIColor.black
-        newpolygon.fillColor = UIColor.black.withAlphaComponent(CGFloat(heightSlider!.value))
+        newpolygon.fillColor = UIColor(red: 1.0, green: 0, blue: 0, alpha: CGFloat(heightSlider!.value))
         newpolygon.map = googleMapView
         
         if cancelDrawingBtn.isHidden == true{ cancelDrawingBtn.isHidden = false }
