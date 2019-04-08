@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import GoogleMaps
 
-class CoreMapViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CoreMapViewController: UIViewController {
     
     @IBOutlet weak var googleMapView: GMSMapView!
     
@@ -97,44 +97,7 @@ class CoreMapViewController: UIViewController, UITableViewDelegate, UITableViewD
         heightLabel.text = "\(Int(heightSlider.value * 400)) ft"
         
     }
-    
-    // These strings will be the data for the table view cells
-    let animals: [String] = ["Horse", "Cow", "Camel", "Sheep", "Goat"]
-    
-    // These are the colors of the square views in our table view cells.
-    // In a real project you might use UIImages.
-    let colors = [UIColor.blue, UIColor.yellow, UIColor.magenta, UIColor.red, UIColor.brown]
-    
-    // Don't forget to enter this in IB also
-    let cellReuseIdentifier = "cell"
-    
-    @IBOutlet var tableView: UITableView!
-    
-    // number of rows in table view
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.animals.count
-    }
-    
-    // create a cell for each table view row
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell:MyCustomCell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! MyCustomCell
-        
-        cell.myView.backgroundColor = self.colors[indexPath.row]
-        cell.myCellLabel.text = self.animals[indexPath.row]
-        
-        return cell
-    }
-    
-    // method to run when table view cell is tapped
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You tapped cell number \(indexPath.row).")
-    }
 
-    
-    
-    
-    
     
     override func viewDidLoad() {
         
@@ -142,9 +105,6 @@ class CoreMapViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         
         super.viewDidLoad()
-        
-        tableView.delegate = self
-        tableView.dataSource = self
         
         
         sideMenus()
