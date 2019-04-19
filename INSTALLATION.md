@@ -24,4 +24,4 @@ Click the application icon that has appeared on the device.
     * Make sure that the compiler target is set to Swift 4
 * Failure to install:
     * Make sure that the provisioning profile in the project settings is set correctly with your Apple ID
-    * Make sure that the target device is running iOS 11.1 or greater
+    * Make sure that the target device is running iOS 8.0 or greater
