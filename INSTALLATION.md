@@ -2,7 +2,7 @@
 * Apple Computer
 * Xcode 10+
 * Swift 4
-* Device with iOS 11.1+
+* Device with iOS 8.0+
 * Active Apple ID
 ## Dependencies
 All dependencies have been listed in the [Podfile](Podfile). To download and install these packages, run `pod install` from the root of this repository.
