@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import GoogleMaps
+import UserNotifications
 
 class CoreMapViewController: UIViewController {
     
@@ -178,6 +179,27 @@ class CoreMapViewController: UIViewController {
         print("Added")
         let encodedData = NSKeyedArchiver.archivedData(withRootObject: newFlightArray)
         UserDefaults.standard.setValue(encodedData, forKey: "flights")
+        
+        let date = Calendar.current.date(byAdding: .hour, value: -1, to: savedFlightPlan.startDate)
+        let triggerDate = Calendar.current.dateComponents([.year,.month,.day,.hour,.minute,.second,], from: date!)
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Upcoming Flight"
+        content.body = "You have a flight coming up in 1 hour!"
+        content.sound = UNNotificationSound.default()
+
+        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate,
+                                                    repeats: false)
+        let center = UNUserNotificationCenter.current()
+        let identifier = "HoneywellNotificationRequest"
+        let request = UNNotificationRequest(identifier: identifier,
+                                            content: content, trigger: trigger)
+        center.add(request, withCompletionHandler: { (error) in
+            if let error = error {
+                print(error)
+            }
+        })
+        
         
         self.performSegue(withIdentifier: "finishSubmit", sender: self)
         

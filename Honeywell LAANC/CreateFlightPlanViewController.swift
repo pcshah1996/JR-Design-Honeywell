@@ -29,12 +29,14 @@ class CreateFlightPlanViewController: UIViewController, UITableViewDelegate, UIT
         dronesTableView.delegate = self
         DispatchQueue.main.async {
             self.dronesTableView.reloadData()
-            let indexPath = IndexPath(row: 0, section: 0)
-            if let cell = self.dronesTableView.cellForRow(at: indexPath) {
-                self.currentSelection = indexPath.row
-                cell.accessoryType = .checkmark
+            if self.droneArray.count > 0{
+                let indexPath = IndexPath(row: 0, section: 0)
+                if let cell = self.dronesTableView.cellForRow(at: indexPath) {
+                    self.currentSelection = indexPath.row
+                    cell.accessoryType = .checkmark
+                }
+                self.dronesTableView.selectRow(at: indexPath, animated: true, scrollPosition: .top)
             }
-            self.dronesTableView.selectRow(at: indexPath, animated: true, scrollPosition: .top)
         }
         // Do any additional setup after loading the view.
     }

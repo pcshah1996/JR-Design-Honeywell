@@ -10,7 +10,7 @@ import UIKit
 
 class MyDronesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var droneArray: NSArray = []
+    var droneArray: [[String:String]] = []
     
     @IBOutlet weak var droneTableView: UITableView!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -27,8 +27,8 @@ class MyDronesViewController: UIViewController, UITableViewDelegate, UITableView
         // we know that cell is not empty now so we use ! to force unwrapping but you could also define cell as
         // let cell = (tableView.dequeue... as? UITableViewCell) ?? UITableViewCell(style: ...)
         
-        cell!.detailTextLabel!.text = (droneArray.object(at: indexPath.row) as! NSDictionary)["make_model"] as? String
-        cell!.textLabel!.text = ((droneArray.object(at: indexPath.row) as! NSDictionary)["name"] as? String) ?? "No Name"
+        cell!.detailTextLabel!.text = droneArray[indexPath.row]["make_model"]
+        cell!.textLabel!.text = droneArray[indexPath.row]["name"]
         
         return cell!
     }
@@ -37,7 +37,7 @@ class MyDronesViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        droneArray = (UserDefaults.standard.value(forKey: "drones") as? NSArray) ?? []
+        droneArray = (UserDefaults.standard.value(forKey: "drones") as? [[String: String]]) ?? []
         print(droneArray)
         
         droneTableView.dataSource = self

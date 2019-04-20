@@ -46,15 +46,15 @@ class AddDroneViewController: UIViewController {
             return
         }
         
-        let droneArray = (UserDefaults.standard.value(forKey: "drones") as? NSMutableArray) ?? []
+        let droneArray = (UserDefaults.standard.value(forKey: "drones") as? [[String:String]]) ?? []
 
         let newDrone: [String: String] = ["name": name!, "make_model": make! + " / " + model!, "serialNo": serialNo!, "registrationID": registrationID!, "weight": weight!, "make": make!, "model": model!]
         print(droneArray)
-        let newDroneArray: NSMutableArray! = []
+        var newDroneArray: [[String: String]] = []
         for drone in droneArray {
-            newDroneArray.add(drone as! [String : String])
+            newDroneArray.append(drone)
         }
-        newDroneArray.add(newDrone)
+        newDroneArray.append(newDrone)
         print("Added")
         UserDefaults.standard.setValue(newDroneArray, forKey: "drones")
         

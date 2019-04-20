@@ -1160,18 +1160,57 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
                                     <action selector="backAction:" destination="WVp-c9-Gat" eventType="touchUpInside" id="BK7-St-9Hs"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flight Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jtv-sF-mMh">
+                                <rect key="frame" x="234" y="25" width="300" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="3dG-cC-erB"/>
+                                    <constraint firstAttribute="width" constant="300" id="ml3-2l-i1x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Time:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pA5-Ut-8yL">
+                                <rect key="frame" x="109" y="54" width="550" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="bLd-Ua-8WA"/>
+                                    <constraint firstAttribute="width" constant="550" id="t5s-g3-fUS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIs-W3-Q3t">
+                                <rect key="frame" x="109" y="83" width="550" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="pPI-Xq-iIG"/>
+                                    <constraint firstAttribute="width" constant="550" id="yVE-Ln-R96"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.12941176469999999" green="0.52156862749999999" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="jIs-W3-Q3t" firstAttribute="centerX" secondItem="5Op-Eg-jrM" secondAttribute="centerX" id="078-CT-a8C"/>
                             <constraint firstItem="8JB-1H-yF9" firstAttribute="trailing" secondItem="5Op-Eg-jrM" secondAttribute="trailing" id="6Aj-kb-MtG"/>
                             <constraint firstItem="8JB-1H-yF9" firstAttribute="bottom" secondItem="5Op-Eg-jrM" secondAttribute="bottom" id="Mca-9n-QXY"/>
                             <constraint firstItem="8JB-1H-yF9" firstAttribute="top" secondItem="5Op-Eg-jrM" secondAttribute="top" constant="125" id="SLx-7K-axB"/>
+                            <constraint firstItem="pA5-Ut-8yL" firstAttribute="centerX" secondItem="5Op-Eg-jrM" secondAttribute="centerX" id="Yzm-6v-gqU"/>
+                            <constraint firstItem="jIs-W3-Q3t" firstAttribute="top" secondItem="pA5-Ut-8yL" secondAttribute="bottom" constant="8" id="l6E-bu-E9Z"/>
+                            <constraint firstItem="pA5-Ut-8yL" firstAttribute="top" secondItem="Jtv-sF-mMh" secondAttribute="bottom" constant="8" id="sce-Bn-6Bf"/>
+                            <constraint firstItem="Jtv-sF-mMh" firstAttribute="top" secondItem="5Op-Eg-jrM" secondAttribute="top" constant="5" id="sze-uO-AHG"/>
+                            <constraint firstItem="Jtv-sF-mMh" firstAttribute="centerX" secondItem="5Op-Eg-jrM" secondAttribute="centerX" id="val-Rj-wQ7"/>
                             <constraint firstItem="8JB-1H-yF9" firstAttribute="leading" secondItem="5Op-Eg-jrM" secondAttribute="leading" id="x7e-ng-Mw9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5Op-Eg-jrM"/>
                     </view>
                     <connections>
+                        <outlet property="endTime" destination="jIs-W3-Q3t" id="Om7-CZ-LhQ"/>
+                        <outlet property="flightName" destination="Jtv-sF-mMh" id="z8g-Jt-Ize"/>
                         <outlet property="googleMapView" destination="8JB-1H-yF9" id="hnQ-Gu-ido"/>
+                        <outlet property="startTime" destination="pA5-Ut-8yL" id="1t8-Xc-Csw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XiM-uP-sT1" userLabel="First Responder" sceneMemberID="firstResponder"/>

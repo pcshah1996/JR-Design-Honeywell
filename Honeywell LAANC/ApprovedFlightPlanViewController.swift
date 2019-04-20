@@ -12,7 +12,11 @@ class ApprovedFlightPlanViewController: UIViewController {
 
     @IBOutlet weak var googleMapView: GMSMapView!
     
+    @IBOutlet weak var endTime: UILabel!
+    @IBOutlet weak var startTime: UILabel!
+    @IBOutlet weak var flightName: UILabel!
     var flightPlan: SavedFlightObject? = nil
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +24,9 @@ class ApprovedFlightPlanViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         let flightLocations = flightPlan!.userFlightLocations
-        
+        startTime.text = flightPlan!.startDate.description(with: Locale.current)
+        endTime.text = flightPlan!.endDate.description(with: Locale.current)
+        flightName.text = flightPlan!.flightName
         var places: [GMSPolygon] = []
         
         for polygon in flightLocations {
