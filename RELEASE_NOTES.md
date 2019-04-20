@@ -10,6 +10,9 @@ Note: new release notes will be appended to the top of this file and the above `
         * Selecting which drone to fly with
         * Selecting what times to fly during
         * Selecting which regions to fly in
+        * 2D drawing for flight plan
+        * Cycle view to see past drawn polygons
+        * GeoJSON Exporting
     * Support for viewing pending and approved flight plans
     * Support for viewing current restrictions on a map
 * Bug Fixes
