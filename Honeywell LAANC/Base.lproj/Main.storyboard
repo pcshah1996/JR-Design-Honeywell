@@ -53,6 +53,20 @@
                                     <action selector="drawActn:" destination="WVp-c9-Gat" eventType="touchUpInside" id="MJX-fU-t1H"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZQ-4x-Jpf" userLabel="Draw">
+                                <rect key="frame" x="664" y="778" width="80" height="50"/>
+                                <color key="backgroundColor" red="0.1247563709" green="0.42891558810000002" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dyV-eW-oLK"/>
+                                </constraints>
+                                <state key="normal" title="Next Area">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.12941176469999999" green="0.52156862749999999" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextDrawing:" destination="WVp-c9-Gat" eventType="touchUpInside" id="UMv-2P-Xej"/>
+                                </connections>
+                            </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4kj-ez-3i7">
                                 <rect key="frame" x="132" y="954" width="504" height="31"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -101,6 +115,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Hyf-Th-8aL" firstAttribute="trailing" secondItem="SZQ-4x-Jpf" secondAttribute="trailing" constant="24" id="4Om-Bo-3XD"/>
                             <constraint firstItem="rbT-Y8-FZn" firstAttribute="leading" secondItem="Hyf-Th-8aL" secondAttribute="leading" id="6tL-xN-u2O"/>
                             <constraint firstItem="rbT-Y8-FZn" firstAttribute="top" secondItem="h4C-qT-9sj" secondAttribute="bottom" constant="-50" id="7qx-gx-Ffj"/>
                             <constraint firstItem="4kj-ez-3i7" firstAttribute="centerX" secondItem="Hyf-Th-8aL" secondAttribute="centerX" id="ACH-UL-jge"/>
@@ -114,6 +129,7 @@
                             <constraint firstItem="4kj-ez-3i7" firstAttribute="top" secondItem="vVa-XH-r1U" secondAttribute="bottom" constant="8" id="RPi-W2-XgN"/>
                             <constraint firstItem="4kj-ez-3i7" firstAttribute="centerY" secondItem="8S4-jm-5XB" secondAttribute="centerY" id="Vtd-Es-urB"/>
                             <constraint firstItem="Hyf-Th-8aL" firstAttribute="trailing" secondItem="VeR-Ql-2zi" secondAttribute="trailing" constant="50" id="fA1-tf-NDV"/>
+                            <constraint firstItem="wzx-O1-ppt" firstAttribute="top" secondItem="SZQ-4x-Jpf" secondAttribute="bottom" constant="28" id="oM7-X5-npP"/>
                             <constraint firstItem="h4C-qT-9sj" firstAttribute="leading" secondItem="rbT-Y8-FZn" secondAttribute="leading" constant="50" id="pg8-QN-wME"/>
                             <constraint firstItem="Hyf-Th-8aL" firstAttribute="trailing" secondItem="rbT-Y8-FZn" secondAttribute="trailing" id="t2i-v2-juL"/>
                             <constraint firstItem="wzx-O1-ppt" firstAttribute="centerX" secondItem="8S4-jm-5XB" secondAttribute="centerX" id="unb-6K-A48"/>
@@ -127,6 +143,7 @@
                         <outlet property="googleMapView" destination="rbT-Y8-FZn" id="hvG-Lg-mbG"/>
                         <outlet property="heightLabel" destination="vVa-XH-r1U" id="tmM-Ii-KjH"/>
                         <outlet property="heightSlider" destination="4kj-ez-3i7" id="NeG-J5-v55"/>
+                        <outlet property="nextDrawingButton" destination="SZQ-4x-Jpf" id="jO4-WZ-YmH"/>
                         <segue destination="zbf-Y4-eMx" kind="presentation" identifier="finishSubmit" id="36s-vA-zU8"/>
                     </connections>
                 </viewController>

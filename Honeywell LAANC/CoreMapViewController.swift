@@ -19,10 +19,11 @@ class CoreMapViewController: UIViewController {
     var startDate: Date = Date.distantPast
     var endDate: Date = Date.distantPast
     var drone: [String:String] = [:]
+    var currentArea: Int = 0
     
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var heightSlider: UISlider!
-    
+        @IBOutlet weak var nextDrawingButton: UIButton!
     @IBOutlet weak var cancelDrawingBtn: UIButton!{
         
         
@@ -82,6 +83,19 @@ class CoreMapViewController: UIViewController {
         
     }
     
+
+    @IBAction func nextDrawing(_ sender: Any) {
+        
+        currentArea += 1
+        
+        let currentPolygon = userDrawablePolygons[currentArea % userDrawablePolygons.count]
+        let loc = currentPolygon.path!.coordinate(at: 0)
+        let cameraPos = GMSCameraPosition(target: loc, zoom: 10, bearing: 0, viewingAngle: 45)
+        self.googleMapView.camera = cameraPos
+        
+        
+    }
+    
     lazy var canvasView:CanvasView = {
         
         var overlayView = CanvasView(frame: self.googleMapView.frame)
@@ -108,12 +122,13 @@ class CoreMapViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        nextDrawingButton.isEnabled = false
         googleMapView.delegate = self
         googleMapView.isBuildingsEnabled = true
         let target = CLLocationCoordinate2D.init(latitude: 33.7490, longitude: -84.3880)
         
         let cameraPos = GMSCameraPosition(target: target, zoom: 10, bearing: 0, viewingAngle: 45)
-        self.googleMapView.animate(to: cameraPos)
+        self.googleMapView.camera = cameraPos
         let path = Bundle.main.path(forResource: "Georgia", ofType: "geojson")
         let url = URL(fileURLWithPath: path!)
         let geoJsonParser = GMUGeoJSONParser(url: url)
@@ -221,6 +236,9 @@ class CoreMapViewController: UIViewController {
         
         if cancelDrawingBtn.isHidden == true{ cancelDrawingBtn.isHidden = false }
         userDrawablePolygons.append(newpolygon)
+        if userDrawablePolygons.count > 0 {
+            nextDrawingButton.isEnabled = true
+        }
         heights.append(Int(heightSlider.value * 400))
         addPolygonDeleteAnnotation(endCoordinate: drawableLoc.last!,polygon: newpolygon)
         addPolygonMoveAnnotation(startCoordinate: drawableLoc.first!,polygon: newpolygon)
@@ -280,6 +298,9 @@ extension CoreMapViewController:GMSMapViewDelegate{
             if let index = userDrawablePolygons.index(of: deletemarker.drawPolygon){
                 
                 userDrawablePolygons.remove(at: index)
+                if userDrawablePolygons.count == 0 {
+                    nextDrawingButton.isEnabled = false
+                }
                 heights.remove(at: index)
                 
             }
